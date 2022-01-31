@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import callery_home, callery_photos  # import your app modules here
+# import your app modules here
+from apps import callery_home, callery_naip, callery_photos, callery_planet
 
 st.set_page_config(page_title="Callery Pear", layout="wide")
 
@@ -10,7 +11,8 @@ st.set_page_config(page_title="Callery Pear", layout="wide")
 apps = {
     "callery_home": {"title": "Home", "icon": "house"},
     "callery_photos": {"title": "Photos", "icon": "images"},
-    # "upload": {"title": "Upload", "icon": "cloud-upload"},
+    "callery_naip": {"title": "NAIP Imagery (1-m)", "icon": "globe"},
+    "callery_planet": {"title": "Planet Imagery (5-m)", "icon": "camera"},
 }
 
 titles = [app["title"] for app in apps.values()]
