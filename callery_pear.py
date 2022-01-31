@@ -35,8 +35,9 @@ with st.sidebar:
     st.sidebar.title("About")
     st.sidebar.info(
         """
+        Web App URL: <https://spatial.utk.edu/callery-pear>
 
-        Web App URL: <https://icons.getbootstrap.com>
+        Contact Qiusheng Wu (qwu18@utk.edu) if you have any questions or comments.
     """
     )
 
