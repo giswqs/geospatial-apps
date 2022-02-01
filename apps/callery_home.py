@@ -1,3 +1,4 @@
+import ee
 import pandas as pd
 import streamlit as st
 import geemap.foliumap as geemap
@@ -40,6 +41,9 @@ def app():
                    zoom=zoom, locate_control=True)
     m.add_basemap("ROADMAP")
     m.add_basemap("HYBRID")
+    states = ee.FeatureCollection("TIGER/2018/States")
+    style = {"color": "000000", "width": 2, "fillColor": "00000000"}
+    m.addLayer(states.style(**style), {}, "US States")
     m.add_points_from_xy(
         "data/PyCTN.csv", popup=["Name", "latitude", "longitude"], layer_name="Callery Pear Locations")
     m.to_streamlit(height=700)

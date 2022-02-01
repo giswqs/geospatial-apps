@@ -22,8 +22,6 @@ def app():
     Map.add_basemap("HYBRID")
     Map.add_basemap("ROADMAP")
 
-    style = {"color": "000000", "width": 2, "fillColor": "00000000"}
-
     names = df["Name"].values.tolist()
     names.sort()
 
@@ -57,6 +55,7 @@ def app():
             Map.add_planet_by_month(year, month)
 
     states = ee.FeatureCollection("TIGER/2018/States")
+    style = {"color": "000000", "width": 2, "fillColor": "00000000"}
     Map.addLayer(states.style(**style), {}, "US States")
     Map.add_points_from_xy(
         "data/PyCTN.csv", popup=["Name", "latitude", "longitude"], layer_name="Callery Pear Locations")
