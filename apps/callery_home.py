@@ -37,13 +37,15 @@ def app():
     latitude = df[df["Name"] == name]["latitude"].values[0]
     longitude = df[df["Name"] == name]["longitude"].values[0]
 
-    m = geemap.Map(center=(latitude, longitude),
-                   zoom=zoom, locate_control=True)
+    m = geemap.Map(center=(latitude, longitude), zoom=zoom, locate_control=True)
     m.add_basemap("ROADMAP")
     m.add_basemap("HYBRID")
     states = ee.FeatureCollection("TIGER/2018/States")
     style = {"color": "000000", "width": 2, "fillColor": "00000000"}
     m.addLayer(states.style(**style), {}, "US States")
     m.add_points_from_xy(
-        "data/PyCTN.csv", popup=["Name", "latitude", "longitude"], layer_name="Callery Pear Locations")
+        "data/PyCTN.csv",
+        popup=["Name", "latitude", "longitude"],
+        layer_name="Callery Pear Locations",
+    )
     m.to_streamlit(height=700)

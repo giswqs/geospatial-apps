@@ -8,17 +8,18 @@ def app():
 
     st.title("NAIP Imagery")
 
-    st.markdown("""
+    st.markdown(
+        """
     NAIP: National Agriculture Imagery Program. See this [link](https://developers.google.com/earth-engine/datasets/catalog/USDA_NAIP_DOQQ) for more information.
 
-    """)
+    """
+    )
 
     df = st.session_state["locations"]
     names = df["Name"].values.tolist()
     names.sort()
 
-    col1, col2, col3, col5, col6, col7, _ = st.columns(
-        [1.8, 2, 2, 1, 1, 1, 1])
+    col1, col2, col3, col5, col6, col7, _ = st.columns([1.8, 2, 2, 1, 1, 1, 1])
 
     Map = geemap.Map(plugin_Draw=True, Draw_export=True)
     # with col1:
@@ -68,7 +69,10 @@ def app():
     # Map.addLayer(roi.style(**style), {}, "Tennessee")
 
     Map.add_points_from_xy(
-        "data/PyCTN.csv", popup=["Name", "latitude", "longitude"], layer_name="Callery Pear Locations")
+        "data/PyCTN.csv",
+        popup=["Name", "latitude", "longitude"],
+        layer_name="Callery Pear Locations",
+    )
 
     Map.set_center(float(lon), float(lat), int(zoom))
     Map.to_streamlit(width=1400, height=700)

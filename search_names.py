@@ -2,18 +2,15 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 # import your app modules here
-from apps import callery_home, callery_naip, callery_photos, callery_planet
+from apps import osm_names
 
-st.set_page_config(page_title="Callery Pear", layout="wide")
+st.set_page_config(page_title="Search Geographic Names", layout="wide")
 
 # A dictionary of apps in the format of {"App title": "App icon"}
 # More icons can be found here: https://icons.getbootstrap.com
 
 apps = {
-    "callery_home": {"title": "Home", "icon": "house"},
-    "callery_photos": {"title": "Photos", "icon": "images"},
-    "callery_naip": {"title": "NAIP Imagery (1-m)", "icon": "globe"},
-    "callery_planet": {"title": "Planet Imagery (5-m)", "icon": "camera"},
+    "osm_names": {"title": "Home", "icon": "house"},
 }
 
 titles = [app["title"] for app in apps.values()]
@@ -38,7 +35,7 @@ with st.sidebar:
     st.sidebar.title("About")
     st.sidebar.info(
         """
-        Web App URL: <https://spatial.utk.edu/callery-pear>
+        Web App URL: <https://spatial.utk.edu/geonames>
 
         Contact Qiusheng Wu (qwu18@utk.edu) if you have any questions or comments.
     """

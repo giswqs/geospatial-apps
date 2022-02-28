@@ -8,14 +8,17 @@ import pandas as pd
 def app():
 
     st.title("Planet Imagery")
-    st.markdown("""
+    st.markdown(
+        """
     See https://www.planet.com for more information.
-    """)
+    """
+    )
 
     df = st.session_state["locations"]
 
     col1, col2, col3, _, col4, col5, col6, col7, _ = st.columns(
-        [3, 0.7, 1, 0.2, 1, 1, 1, 1, 1])
+        [3, 0.7, 1, 0.2, 1, 1, 1, 1, 1]
+    )
 
     Map = geemap.Map(locate_control=True, plugin_LatLngPopup=False)
 
@@ -58,6 +61,9 @@ def app():
     style = {"color": "000000", "width": 2, "fillColor": "00000000"}
     Map.addLayer(states.style(**style), {}, "US States")
     Map.add_points_from_xy(
-        "data/PyCTN.csv", popup=["Name", "latitude", "longitude"], layer_name="Callery Pear Locations")
+        "data/PyCTN.csv",
+        popup=["Name", "latitude", "longitude"],
+        layer_name="Callery Pear Locations",
+    )
     Map.set_center(float(lon), float(lat), int(zoom))
     Map.to_streamlit(height=700)

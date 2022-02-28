@@ -17,7 +17,7 @@ def app():
     links = [
         "https://i.imgur.com/lAXIidc.jpg",
         "https://i.imgur.com/R8X17Cr.jpg",
-        "https://i.imgur.com/mHsz3NY.jpg"
+        "https://i.imgur.com/mHsz3NY.jpg",
     ]
 
     with expander:
