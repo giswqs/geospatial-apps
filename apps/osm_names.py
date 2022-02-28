@@ -35,10 +35,14 @@ def app():
                     column = st.selectbox(
                         "Filter by", df.columns, index=list(df.columns).index('country')
                     )
+                    if "US" in df[column].unique():
+                        default = "US"
+                    else:
+                        default = df[column].unique()
                     filters = st.multiselect(
                         "Select values",
                         df[column].unique(),
-                        default=df[column].unique(),
+                        default=default,
                     )
 
                     if filters:
