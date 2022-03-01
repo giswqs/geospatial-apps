@@ -10,8 +10,7 @@ def search(name, limit):
     df['longitude'] = df['geometry.coordinates'].str[0]
     df['latitude'] = df['geometry.coordinates'].str[1]
     df['country'] = df['countrycode']
-    df.drop(['type', 'geometry.coordinates',
-            'countrycode'], axis=1, inplace=True)
+    df.drop(['type', 'geometry.coordinates', 'countrycode'], axis=1, inplace=True)
     return df
 
 
@@ -26,7 +25,7 @@ def app():
     m.add_basemap('OpenStreetMap')
 
     with col2:
-        limit = st.slider("The number of results to return", 1, 5000, 1000)
+        limit = st.slider("The number of results to return", 1, 8000, 1000)
         name = st.text_input("Enter a name")
         if name:
             try:
@@ -48,8 +47,7 @@ def app():
                     if filters:
                         df = df[df[column].isin(filters)]
                     st.text(f"Found {len(df)} results")
-                    leafmap.st_download_button(
-                        "Download data", df, csv_sep="\t")
+                    leafmap.st_download_button("Download data", df, csv_sep="\t")
                     m.add_points_from_xy(
                         df,
                         x='longitude',
