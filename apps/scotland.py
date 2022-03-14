@@ -40,7 +40,12 @@ def app():
     with col6:
         checkbox = st.checkbox('Add OS 25 inch')
 
-    m = leafmap.Map(center=[float(lat), float(lon)], zoom=int(zoom), locate_control=True, draw_control=False)
+    m = leafmap.Map(
+        center=[float(lat), float(lon)],
+        zoom=int(zoom),
+        locate_control=True,
+        draw_control=False,
+    )
 
     if left_name in basemaps:
         left_layer = basemaps[left_name]
