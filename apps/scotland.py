@@ -45,4 +45,4 @@ def app():
         )
 
     m.split_map(left_layer, right_layer)
-    m.to_streamlit(height=800)
+    m.to_streamlit(height=650)
