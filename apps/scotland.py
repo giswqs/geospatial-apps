@@ -12,7 +12,7 @@ def app():
     names = df['Name'].values.tolist() + list(basemaps.keys())
     links = df['URL'].values.tolist() + list(basemaps.values())
 
-    col1, col2, col3, col4, col5, col6 = st.columns([3, 3, 0.6, 0.6, 1, 1])
+    col1, col2, col3, col4, col5, col6 = st.columns([3, 3, 1, 1, 1, 1.5])
     with col1:
         left_name = st.selectbox(
             'Select the left layer', names, index=names.index('HYBRID')
@@ -34,12 +34,13 @@ def app():
         lon = st.text_input('Longitude', "-2.98")
 
     with col5:
-        zoom = st.slider('Zoom', 1, 24, 6, step=1)
+        # zoom = st.slider('Zoom', 1, 24, 6, step=1)
+        zoom = st.text_input('Zoom', "6")
 
     with col6:
         checkbox = st.checkbox('Add OS 25 inch')
 
-    m = leafmap.Map(center=[float(lat), float(lon)], zoom=zoom, locate_control=True, draw_control=False)
+    m = leafmap.Map(center=[float(lat), float(lon)], zoom=int(zoom), locate_control=True, draw_control=False)
 
     if left_name in basemaps:
         left_layer = basemaps[left_name]
