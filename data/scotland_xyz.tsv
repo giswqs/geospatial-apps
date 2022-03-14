@@ -1,0 +1,12 @@
+Name	URL
+Ordnance Survey - Air Photos, 1944-1950 - 1:10,560	https://geo.nls.uk/maps/air-photos/{z}/{x}/{y}.png
+Ordnance Survey - Six Inch Scotland, 1843-1882 - 1:10,560	https://mapseries-tilesets.s3.amazonaws.com/os/6inchfirst/{z}/{x}/{y}.png
+GSGS - GSGS 3906, 1941 - 1:25,000	https://mapseries-tilesets.s3.amazonaws.com/gsgs3906/{z}/{x}/{y}.png
+Roy - Roy Highlands, 1747-1752 - 1:36000	https://mapseries-tilesets.s3.amazonaws.com/roy/highlands/{z}/{x}/{y}.png
+Roy - Roy Lowlands, 1752-1755 - 1:36000	https://mapseries-tilesets.s3.amazonaws.com/roy/lowlands/{z}/{x}/{y}.png
+OS 25 inch, 1892-1914	https://mapseries-tilesets.s3.amazonaws.com/25_inch/surrey/{z}/{x}/{y}.png
+OS 25 inch, 1892-1914 v2	https://geo.nls.uk/mapdata3/os/25_inch_holes_england/{z}/{x}/{y}.png
+Great Britain - OS 1:25,000, 1937-61	https://nls-0.tileserver.com/fpsUZbIoj0Oa/{z}/{x}/{y}.jpg
+Great Britain - OS One Inch 7th series, 1955-61	https://nls-0.tileserver.com/fpsUZbc4ftb2/{z}/{x}/{y}.jpg
+Great Britain - OS 1:10,560, 1949-1970	https://mapseries-tilesets.s3.amazonaws.com/os/britain10knatgrid/{z}/{x}/{y}.png
+Great Britain - Bartholomew Half Inch, 1897-1907	https://mapseries-tilesets.s3.amazonaws.com/bartholomew_great_britain/{z}/{x}/{y}.png

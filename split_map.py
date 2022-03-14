@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 # import your app modules here
-from apps import split
+from apps import split, scotland
 
 st.set_page_config(page_title="Split-panel Map", layout="wide")
 
@@ -11,6 +11,7 @@ st.set_page_config(page_title="Split-panel Map", layout="wide")
 
 apps = {
     "split": {"title": "Home", "icon": "house"},
+    "scotland": {"title": "Scotland", "icon": "globe"},
 }
 
 titles = [app["title"] for app in apps.values()]
