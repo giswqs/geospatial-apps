@@ -12,7 +12,7 @@ def app():
     names = df['Name'].values.tolist() + list(basemaps.keys())
     links = df['URL'].values.tolist() + list(basemaps.values())
 
-    col1, col2, col3, col4, col5 = st.columns([3, 3, 1, 1, 1])
+    col1, col2, col3, col4, col5, col6 = st.columns([3, 3, 1, 1, 1, 1])
     with col1:
         left_name = st.selectbox(
             'Select the left layer', names, index=names.index('HYBRID')
@@ -33,6 +33,9 @@ def app():
 
     with col5:
         zoom = st.slider('Zoom', 1, 24, 6, step=1)
+
+    with col6:
+        checkbox = st.checkbox('Add OS 25 inch')
 
     m = leafmap.Map(center=[lat, lon], zoom=zoom)
 
@@ -55,6 +58,13 @@ def app():
             attr='National Library of Scotland',
             overlay=True,
         )
+
+    if checkbox:
+        for index, name in enumerate(names):
+            if 'OS 25 inch' in name:
+                m.add_tile_layer(
+                    links[index], name, attribution='National Library of Scotland'
+                )
 
     m.split_map(left_layer, right_layer)
     m.to_streamlit(height=650)
