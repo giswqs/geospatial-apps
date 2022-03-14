@@ -29,8 +29,12 @@ def app():
     with st.echo():
         m = geemap.Map(center=[40, -100], zoom=4)
 
-        url1 = 'https://www.mrlc.gov/geoserver/mrlc_display/NLCD_2001_Land_Cover_L48/wms?'
-        url2 = 'https://www.mrlc.gov/geoserver/mrlc_display/NLCD_2019_Land_Cover_L48/wms?'
+        url1 = (
+            'https://www.mrlc.gov/geoserver/mrlc_display/NLCD_2001_Land_Cover_L48/wms?'
+        )
+        url2 = (
+            'https://www.mrlc.gov/geoserver/mrlc_display/NLCD_2019_Land_Cover_L48/wms?'
+        )
 
         left_layer = folium.WmsTileLayer(
             url=url1,
@@ -52,7 +56,6 @@ def app():
         m.split_map(left_layer, right_layer)
         m.add_legend(builtin_legend='NLCD')
         m.to_streamlit(height=600)
-
 
     st.header('Using Earth Engine layers')
     with st.echo():
