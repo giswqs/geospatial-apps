@@ -1,10 +1,9 @@
 Name	URL
 Ordnance Survey - Air Photos, 1944-1950 - 1:10,560	https://geo.nls.uk/maps/air-photos/{z}/{x}/{y}.png
 Ordnance Survey - Six Inch Scotland, 1843-1882 - 1:10,560	https://mapseries-tilesets.s3.amazonaws.com/os/6inchfirst/{z}/{x}/{y}.png
-GSGS - GSGS 3906, 1941 - 1:25,000	https://mapseries-tilesets.s3.amazonaws.com/gsgs3906/{z}/{x}/{y}.png
+War Office, Great Britain 1:25,000. GSGS 3906, 1940-43	https://mapseries-tilesets.s3.amazonaws.com/gsgs3906/{z}/{x}/{y}.png
 Roy - Roy Highlands, 1747-1752 - 1:36000	https://mapseries-tilesets.s3.amazonaws.com/roy/highlands/{z}/{x}/{y}.png
 Roy - Roy Lowlands, 1752-1755 - 1:36000	https://mapseries-tilesets.s3.amazonaws.com/roy/lowlands/{z}/{x}/{y}.png
-OS 25 inch, 1892-1914 'Holes'	https://geo.nls.uk/mapdata3/os/25_inch_holes_england/{z}/{x}/{y}.png
 Great Britain - OS 1:25,000, 1937-61	https://nls-0.tileserver.com/fpsUZbIoj0Oa/{z}/{x}/{y}.jpg
 Great Britain - OS One Inch 7th series, 1955-61	https://nls-0.tileserver.com/fpsUZbc4ftb2/{z}/{x}/{y}.jpg
 Great Britain - OS 1:10,560, 1949-1970	https://mapseries-tilesets.s3.amazonaws.com/os/britain10knatgrid/{z}/{x}/{y}.png
@@ -34,12 +33,12 @@ OS 25 inch, 1892-1914 - Lincolnshire	https://mapseries-tilesets.s3.amazonaws.com
 OS 25 inch, 1892-1914 - London	https://mapseries-tilesets.s3.amazonaws.com/25_inch/london/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Middlesex	https://mapseries-tilesets.s3.amazonaws.com/25_inch/middlesex/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Norfolk	https://mapseries-tilesets.s3.amazonaws.com/25_inch/norfolk/{z}/{x}/{y}.png
-OS 25 inch, 1892-1914 - Northamptonshire	https://mapseries-tilesets.s3.amazonaws.com/25_inch/northamptonshire/{z}/{x}/{y}.png
+OS 25 inch, 1892-1914 - Northamptonshire	https://mapseries-tilesets.s3.amazonaws.com/25_inch/northampton/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Northumberland	https://mapseries-tilesets.s3.amazonaws.com/25_inch/northumberland/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Nottinghamshire	https://mapseries-tilesets.s3.amazonaws.com/25_inch/nottinghamshire/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Oxford	https://mapseries-tilesets.s3.amazonaws.com/25_inch/oxford/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Rutland	https://mapseries-tilesets.s3.amazonaws.com/25_inch/rutland/{z}/{x}/{y}.png
-OS 25 inch, 1892-1914 - Shropshire / Derbyshire	https://mapseries-tilesets.s3.amazonaws.com/25_inch/shrop_derby/{z}/{x}/{y}.png
+OS 25 inch, 1892-1914 - Shropshire / Derbyshire	https://mapseries-tilesets.s3.amazonaws.com/25_inch/Shrop_Derby/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Somerset	https://mapseries-tilesets.s3.amazonaws.com/25_inch/somerset/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Stafford	https://mapseries-tilesets.s3.amazonaws.com/25_inch/stafford/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Suffolk	https://mapseries-tilesets.s3.amazonaws.com/25_inch/suffolk/{z}/{x}/{y}.png
@@ -48,7 +47,7 @@ OS 25 inch, 1892-1914 - Sussex	https://mapseries-tilesets.s3.amazonaws.com/25_in
 OS 25 inch, 1892-1914 - Wales	https://mapseries-tilesets.s3.amazonaws.com/25_inch/wales/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Warwick	https://mapseries-tilesets.s3.amazonaws.com/25_inch/warwick/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Westmorland	https://mapseries-tilesets.s3.amazonaws.com/25_inch/westmorland/{z}/{x}/{y}.png
-OS 25 inch, 1892-1914 - Wiltshire	https://mapseries-tilesets.s3.amazonaws.com/25_inch/wiltshire/{z}/{x}/{y}.png
-OS 25 inch, 1892-1914 - Worcestershire	https://mapseries-tilesets.s3.amazonaws.com/25_inch/worcestershire/{z}/{x}/{y}.png
+OS 25 inch, 1892-1914 - Wiltshire	https://mapseries-tilesets.s3.amazonaws.com/25_inch/wiltshire2nd/{z}/{x}/{y}.png
+OS 25 inch, 1892-1914 - Worcestershire	https://mapseries-tilesets.s3.amazonaws.com/25_inch/Worcestershire/{z}/{x}/{y}.png
 OS 25 inch, 1892-1914 - Yorkshire	https://mapseries-tilesets.s3.amazonaws.com/25_inch/yorkshire/{z}/{x}/{y}.png
-OS 25 inch, 1892-1914 'Holes'	https://geo.nls.uk/mapdata3/os/25_inch_holes_england/{z}/{x}/{y}.png
+OS 25 inch, 1892-1914 'Holes' (fills gaps in series)	https://geo.nls.uk/mapdata3/os/25_inch_holes_england/{z}/{x}/{y}.png
