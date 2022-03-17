@@ -72,7 +72,10 @@ def app():
                 "Select a palette", palettes, index=palettes.index("gist_earth")
             )
             countries = st.multiselect("Select countries", names)
+            diff_chk = st.checkbox("NTL differencing: end_year - start_year")
+            trans_chk = st.checkbox("Make low values transparent")
             split = st.checkbox("Split-panel map")
+
             submitted = st.form_submit_button("Submit")
 
             if submitted:
@@ -98,6 +101,10 @@ def app():
 
                     ntl_a = ntl_a.clip(selected_countries)
                     ntl_b = ntl_b.clip(selected_countries)
+
+                if trans_chk:
+                    ntl_a = ntl_a.updateMask(ntl_a.gt(min_max[0]))
+                    ntl_b = ntl_b.updateMask(ntl_b.gt(min_max[0]))
 
                 if split:
                     left_layer = geemap.ee_tile_layer(
@@ -138,6 +145,18 @@ def app():
                         },
                         f'NTL {years[1]}',
                     )
+
+                    if diff_chk:
+                        diff = ntl_b.subtract(ntl_a)
+                        Map.addLayer(
+                            diff,
+                            {
+                                'min': min_max[0],
+                                'max': min_max[1],
+                                'palette': cm.get_palette(palette, 15),
+                            },
+                            f'NTL {years[1]} - {years[0]}',
+                        )
 
     with row1_col1:
         Map.to_streamlit(height=650)
