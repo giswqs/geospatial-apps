@@ -2,27 +2,27 @@ import folium
 import pandas as pd
 import streamlit as st
 import leafmap.foliumap as leafmap
-
+import folium.plugins as plugins
 
 def app():
 
     st.title('National Library of Scotland XYZ Layers')
     df = pd.read_csv('data/scotland_xyz.tsv', sep='\t')
-    basemaps = leafmap.folium_basemaps
+    basemaps = leafmap.basemaps
     names = df['Name'].values.tolist() + list(basemaps.keys())
     links = df['URL'].values.tolist() + list(basemaps.values())
 
     col1, col2, col3, col4, col5, col6 = st.columns([3, 3, 1, 1, 1, 1.5])
     with col1:
         left_name = st.selectbox(
-            'Select the left layer', names, index=names.index('HYBRID')
+            'Select the left layer', names, index=names.index('Great Britain - OS 1:25,000, 1937-61')
         )
 
     with col2:
         right_name = st.selectbox(
             'Select the right layer',
             names,
-            index=names.index('Great Britain - Bartholomew Half Inch, 1897-1907'),
+            index=names.index('HYBRID'),
         )
 
     with col3:
@@ -45,7 +45,10 @@ def app():
         zoom=int(zoom),
         locate_control=True,
         draw_control=False,
+        measure_control=False,
     )
+    measure = plugins.MeasureControl(position="bottomleft", active_color = 'orange')
+    measure.add_to(m)
 
     if left_name in basemaps:
         left_layer = basemaps[left_name]
