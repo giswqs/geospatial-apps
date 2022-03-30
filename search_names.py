@@ -9,12 +9,12 @@ st.set_page_config(page_title="Search Geographic Names", layout="wide")
 # A dictionary of apps in the format of {"App title": "App icon"}
 # More icons can be found here: https://icons.getbootstrap.com
 
-apps = {
-    "osm_names": {"title": "Home", "icon": "house"},
-}
+apps = [
+    {"func":osm_names.app, "title": "Home", "icon": "house"},
+]
 
-titles = [app["title"] for app in apps.values()]
-icons = [app["icon"] for app in apps.values()]
+titles = [app["title"] for app in apps]
+icons = [app["icon"] for app in apps]
 
 params = st.experimental_get_query_params()
 
@@ -42,6 +42,6 @@ with st.sidebar:
     )
 
 for app in apps:
-    if apps[app]["title"] == selected:
-        eval(f"{app}.app()")
+    if app["title"] == selected:
+        app["func"]()
         break
