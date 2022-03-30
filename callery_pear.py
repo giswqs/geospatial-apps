@@ -9,15 +9,15 @@ st.set_page_config(page_title="Callery Pear", layout="wide")
 # A dictionary of apps in the format of {"App title": "App icon"}
 # More icons can be found here: https://icons.getbootstrap.com
 
-apps = {
-    "callery_home": {"title": "Home", "icon": "house"},
-    "callery_photos": {"title": "Photos", "icon": "images"},
-    "callery_naip": {"title": "NAIP Imagery (1-m)", "icon": "globe"},
-    "callery_planet": {"title": "Planet Imagery (5-m)", "icon": "camera"},
-}
+apps = [
+    {"func": callery_home.app, "title": "Home", "icon": "house"},
+    {"func": callery_photos.app, "title": "Photos", "icon": "images"},
+    {"func": callery_naip.app, "title": "NAIP Imagery (1-m)", "icon": "globe"},
+    {"func": callery_planet.app, "title": "Planet Imagery (5-m)", "icon": "camera"},
+]
 
-titles = [app["title"] for app in apps.values()]
-icons = [app["icon"] for app in apps.values()]
+titles = [app["title"] for app in apps]
+icons = [app["icon"] for app in apps]
 
 params = st.experimental_get_query_params()
 
@@ -45,6 +45,6 @@ with st.sidebar:
     )
 
 for app in apps:
-    if apps[app]["title"] == selected:
-        eval(f"{app}.app()")
+    if app["title"] == selected:
+        app["func"]()
         break
